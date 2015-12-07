@@ -8,9 +8,7 @@ puts "Need the weather? Type your zip code."
 $zip = gets.chomp
 w = w.forecast($zip)
 $location = w['current_observation']['display_location']['full']
-w = w['forecast']
-w = w['txt_forecast']
-w = w['forecastday']
+w = w['forecast']['txt_forecast']['forecastday']
 
 $today = w[0]
 $today_forecast = $today['fcttext']
